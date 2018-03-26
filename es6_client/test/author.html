@@ -1,0 +1,35 @@
+<!--
+       Test AJAX backend
+
+       Backen MUST be running!
+       (and deployed to server before, run in Netbeans to deploy)
+
+       To start server from command line
+
+       ./{path-to-payara-dir}/asadmin start-domain domain1
+
+       NOTE: Port conflicts, start backend first, then start hs
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../dist/jquery.min.js"></script>
+  <script type="module" src="../test/authorService.js"></script>
+  <title>Author</title>
+</head>
+
+<body>
+  <script>
+    // Ugly hack, but must create global reference to jquery
+    // to be accsessible in ES6 modules. JQuery doesn't
+    // support ES6 module loading
+    window.$ = $;
+  </script>
+  <h1>Check result in debugger</h1>
+</body>
+
+</html>

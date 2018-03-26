@@ -1,0 +1,30 @@
+*** README ***
+
+This is the same model and persistence as workshop 3 but here 
+wrapped as a REST web service (no front end used, except a single test page). 
+Need running database!
+
+This is  NetBeans 8.2 Java Enterprise Maven project
+Possible a bug in GlassFish 4.1.2? If so use Payara 4.1.2.173  
+Payara is a spin off from GlassFish so server output says GlassFish
+Payara is in /chamers/groups/ws-devel
+
+If using the above everything should work out of the box. 
+
+JEE Techniques used
+- As in workshop 3 (minus view and control parts)
+- JAX-RS the API for REST
+- Google Gson API to convert objects from/to JSON
+
+Directory layout
+- As workshop 3 but ..
+- All classes related to web services/REST in package chl.hajo.library.rest
+- A simple AJAX jquery client is in the Web Pages/js
+
+Testing REST is manual
+- Use curls_tests.sh
+
+Database
+- As in workshop 3
+- NOTE! Watch out for duplicate key errors!
+(possible to delete from inside NetBeans > Services > Databases > ...

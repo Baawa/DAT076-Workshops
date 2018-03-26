@@ -1,0 +1,35 @@
+body{
+  font-family: 'Roboto', sans-serif;
+  background: green;
+  color: white;
+}
+
+.link{
+  color: yellow;
+  font-size: 20pt;
+}
+
+@media (max-width: 800px) {
+  body{
+    background: blue;
+  }
+}
+
+.slidein {
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-left:100%;
+    width:300%
+  }
+
+  to {
+    margin-left:0%;
+    width:100%;
+  }
+}

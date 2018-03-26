@@ -1,0 +1,30 @@
+{
+  "name": "node_rest",
+  "version": "0.0.1",
+  "description": "REST with Express and TypeORM.",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "author": {
+    "name": "Umed Khudoiberdiev and hajo"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-watch": "^2.0.7"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mysql": "^2.14.1",
+    "reflect-metadata": "^0.1.10",
+    "typeorm": "^0.1.0"
+  },
+  "scripts": {
+    "start": "babel src --out-dir dist && node dist/app.js",
+    "startFAIL1": "babel-watch src/app.js",
+    "startFAIL2": "nodemon src/app.js --exec babel-node --presets es2015,stage-2"
+  }
+}

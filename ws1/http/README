@@ -1,0 +1,12 @@
+
+Basic demo of HTTP using Node backend and curl
+
+Install:
+  npm install    (see package.json)
+
+Run:
+  node server.js
+
+  or better (have to install nodemon)
+
+  nodemon server.js

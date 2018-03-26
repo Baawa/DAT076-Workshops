@@ -1,0 +1,18 @@
+Java REST backend for the TodoList application
+(one page shows up, but not used, real work is sending json to client)
+
+Purpose:
+  REST backend
+
+Install:
+    Open in NetBeans, build (to download Maven-dependencies)
+    NOTE: Tomcat 8 accepts Java 7 (i.e. not Java 8) 
+
+Compile:
+    -
+
+Test:
+    - Using curl, curl_test.txt
+
+Run:
+    NetBeans

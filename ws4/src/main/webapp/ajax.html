@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JEE REST</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/jqajax.js"></script>
+    </head>
+    <body>
+        <h1>Testing AJAX calls against Author resource</h1>
+        <p>Using jQuery AJAX API (install using npm or other)</p>
+
+        <div>
+            <button id="clear"> Clear</button>
+        </div>
+
+        <div>
+            <input id="get" type="button" value="Get all" />
+            <!-- Any result here (as raw JSON)  -->
+            <div id="success"></div>
+            <hr/>
+            <div>
+                <div>
+                    <input id="id" type="text" size="4" />
+                    <input id="getById" type="button" value="GetById" />
+                </div>
+                <hr/>
+                <div>
+                    <p>Input name (other data hard coded)</p>
+                    <input id="name" type="text" size="20" />
+                    <input id="add" type="button" value="add" />
+                </div>
+                <hr/>
+                <div>
+                    <p>Fill in id at getById field, then click </p>
+                    <input id="delete" type="button" value="delete" />
+                </div>
+                <hr/>
+
+            </div>
+
+        </div>
+        <div id="error"></div>
+    </body>
+</html>

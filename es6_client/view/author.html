@@ -1,0 +1,146 @@
+<!--
+
+    (Close to) Single page application
+
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- The below doesn't support ES6 module loading, must use like this -->
+  <script src="../dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="../dist/bootstrap.min.css">
+  <script src="../dist/bootstrap.min.js"></script>
+  <script src="../dist/jquery.dataTables.js"></script>
+  <link rel="stylesheet" href="../dist/css/jquery.dataTables.css">
+  <!-- Use ES 6 -->
+  <script type="module" src="./authortable.js"></script>
+  <script type="module" src="../control/authorCtrl.js"></script>
+
+  <!-- Use ES5 Babel, Watchify (see README) -->
+  <!--<script type="text/javascript" src="../dist/bundle.js"></script>-->
+
+  <title>Author</title>
+</head>
+
+<body>
+  <script>
+  </script>
+  <!-- This is where the table should hook to the DOM -->
+  <div class="container">
+    <!-- TODO generate from JS -->
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Library  </a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/view/author.html">Author</a></li>
+          <li><a href="#">Book</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="row">
+      <div class="col-md-12">
+        <img src="../resources/img/banner.jpg" class="img-responsive" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <h2>Author</h2>
+        <p>Click in table to edit/delete</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Tha add author form part -->
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-1">
+              <span class="label label-info">Add Author</span>
+            </div>
+            <div class="col-md-1">
+              <input id="id" type="text" class="form-control" placeholder="Id">
+            </div>
+            <div class="col-md-2">
+              <input id="firstName" type="text" class="form-control" placeholder="First name">
+            </div>
+            <div class="col-md-2">
+              <input id="lastName" type="text" class="form-control" placeholder="Last name">
+            </div>
+            <div class="col-md-2">
+              <input id="email" type="text" class="form-control" placeholder="Email">
+            </div>
+            <div class="col-md-1">
+              <button id="add" type="button" class="btn btn-primary">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Here the datatable hooks in -->
+        <table id="author" class="stripe" width="100%">
+          <thead>
+            <tr>
+              <th>Id</th>
+              <th>Last name</th>
+              <th>First Name</th>
+              <th>Email</th>
+              <th>Address</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- This is a pop up dialog -->
+  <div id="editDeleteModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Update or Delete?</h4>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <!-- Id must be unique in page, so can't reuse id here -->
+              <input id="mid" type="text" disabled="true" />
+            </div>
+            <div class="form-group">
+              <input id="mfirstName" type="text" />
+            </div>
+            <div class="form-group">
+              <input id="mlastName" type="text" />
+            </div>
+            <div class="form-group">
+              <input id="memail" type="text" />
+            </div>
+            <div class="form-group">
+              <input id="maddress" type="text" />
+            </div>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button id="update" type="button" class="btn btn-primary">Update</button>
+            <button id="delete" type="button" class="btn btn-danger">Delete</button>
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>

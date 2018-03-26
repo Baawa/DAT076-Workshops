@@ -1,0 +1,26 @@
+
+Test the Author resource
+
+# (Re)create database
+curl -v http://localhost:8080/db
+
+# Options (used by CORS preflight)
+curl -v -X OPTIONS http://localhost:8080/
+
+# Get all authors
+curl -v http://localhost:8080/authors
+
+# Get single author
+curl -v http://localhost:8080/authors/FF
+
+# Get primitive type (number of authors)
+curl -v http://localhost:8080/authors/count
+
+# Create new author using JSON (this is a POST)
+curl -v -H "Content-Type: application/json" http://localhost:8080/authors --data '{"id":"XX", "firstName":"Xbert", "lastName":"Xson", "email":"xson@mail", "address":""}'
+
+# Update an author
+curl -v -H "Content-Type: application/json" -X PUT http://localhost:8080/authors --data '{"id":"XX", "firstName":"NEWbert", "lastName":"NEWson", "email":"NEW@mail", "address":""}'
+
+# Delete (last part of URL is id)
+curl -v -X DELETE http://localhost:8080/authors/XX

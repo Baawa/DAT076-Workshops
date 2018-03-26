@@ -1,0 +1,22 @@
+{
+  "name": "es6_client",
+  "version": "1.0.0",
+  "description": "This is an ES6 \"in-house MVC\" client application running in the browser (reason for in-house: Any framework too complex)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "datatables.net": "^1.10.16",
+    "datatables.net-dt": "^1.10.16",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0"
+  }
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition template="../template.xhtml" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:b="http://bootsfaces.net/ui"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:c="http://xmlns.jcp.org/jsp/jstl/core">
+    <ui:define name="content"> 
+        <c:set var="root" value="#{request.contextPath}" /> 
+        <b:row>
+            <b:column span="12">
+                <h2>Books</h2>
+            </b:column>
+        </b:row>            
+        <b:row>
+            <input id="isbn" placeholder="isbn" disabled="true"/>
+            <input id="genre" placeholder="genre" disabled="true"/>
+            <input type="number" id="price" placeholder="price" disabled="true"/>
+            <input id="title" placeholder="title" disabled="true"/>
+            <button id="deleteBtn">Delete entry</button>
+            <script>
+                $("#isbn").val(getUrlParameter("isbn"));
+                
+                rb.getByIsbn();
+            </script>
+        </b:row>
+        <b:row>
+            <b:messages/>
+        </b:row>
+    </ui:define>
+</ui:composition>

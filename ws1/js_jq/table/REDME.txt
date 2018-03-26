@@ -1,0 +1,11 @@
+
+This is old fashion ES5
+Using pure JavaScript
+
+Should work in any browser
+
+NOTE: Chrome > Dev tools > Network > Disable Cache, will ease you mind!
+
+To run
+------
+Start hs server in same directory

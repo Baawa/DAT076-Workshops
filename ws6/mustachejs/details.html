@@ -1,0 +1,46 @@
+<!--
+
+      This is the details page
+
+      Use HTML and Mustache to display details of an item
+
+-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link type='text/css' , rel='stylesheet' , href='css/default.css' />
+</head>
+
+<body>
+
+</body>
+{{ > header }}
+<h1> Details for {{note.id}}</h1>
+<table>
+    <thead>
+        <tr>
+            <td>Note details </td>
+        </tr>
+    </thead>
+    <tr>
+        <td> id </td>
+        <td>{{ note.id }}</td>
+    </tr>
+    <tr>
+        <td> Todo </td>
+        <td>{{ note.text }}</td>
+    </tr>
+    <tr>
+        <td> Date time </td>
+        <td>{{ note.dateTime }}</td>
+    </tr>
+    <tr>
+        <td> Done </td>
+        <td>{{ note.done }}</td>
+    </tr>
+</table>
+<a href="index.html"> Back </a> {{ > footer }}
+
+</html>

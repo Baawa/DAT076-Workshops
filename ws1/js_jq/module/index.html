@@ -1,0 +1,48 @@
+<!--
+
+    Host page using the module and control
+
+    *** NOTHING TO DO HERE ***
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script>
+  <!-- If ES6 -->
+  <!--<script type="module" src="./control.js"></script>-->
+
+
+  <!-- If using Browserify, Watchify -->
+  <script type="text/javascript" src="./bundle.js"></script>
+</head>
+
+<body>
+  <h1>Create a table using JavaScript</h1>
+  <p>This page uses ES6 modules and jQuery</p>
+  <button id="create"> create </button>
+  <input type="text" id="rows" value="3" size="3" />
+  <input type="text" id="cols" value="3" size="3" />
+  <label for="striped">Striped</label>
+  <input type="checkbox" id="striped" />
+  <hr/>
+
+  <label for="row">Edit</label>
+  <input type="text" id="row" value="0" size="3" />
+  <input type="text" id="col" value="0" size="3" />
+  <label for="striped">Value</label>
+  <input type="text" id="value" size="10" />
+  <button id="edit"> edit </button>
+  <hr/>
+
+  <!-- This is where the table should hook to the DOM -->
+  <div id="parent"></div>
+
+</body>
+
+</html>

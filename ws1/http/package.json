@@ -1,0 +1,10 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "http": "^0.0.0",
+    "router": "^1.1.4"
+  }
+}

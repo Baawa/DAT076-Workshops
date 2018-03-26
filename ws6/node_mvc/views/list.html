@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+{{ >partials/head }}
+
+
+<body>
+	{{ >partials/header}}
+	<p> {{ text }} </p>
+	<table>
+		{{#todolist}}
+		<tr>
+			<td><a href="/todo/list?id={{id}}" /> {{ id }}</td>
+			<td>{{ text }}</td>
+			<td>{{ dateTime }}</td>
+			<td>{{ done }}</td>
+			<td><a href="/todo/list/edit?id={{id}}" />Edit</td>
+			<td><a href="/todo/list/delete?id={{id}}" />Delete</td>
+		</tr>
+		{{/todolist}}
+	</table>
+	<a href="/todo/list/add"> New note </a> {{ >partials/footer }}
+</body>
+
+</html>

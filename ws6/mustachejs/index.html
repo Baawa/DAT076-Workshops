@@ -1,0 +1,33 @@
+<!--
+
+     This is the master page
+
+     - Use HTML and Musatche to create a list of items.
+
+-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <link type='text/css' rel='stylesheet' href='css/default.css' />
+</head>
+
+<body>
+  {{ > header}}
+  <h1>Master</h1>
+  <table>
+    {{#todoList}}
+    <tr>
+      <td><a href="details.html?id={{id}}">{{id}}</a></td>
+      <td>{{ text }}</td>
+      <td>{{ dateTime }} </td>
+      <td>{{ done }} </td>
+    </tr>
+    {{/todoList}}
+  </table>
+  {{ >footer }}
+
+</body>
+
+</html>

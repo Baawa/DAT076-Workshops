@@ -1,0 +1,40 @@
+*** README ****
+
+This is server side MVC using NodeJS. This is ES5!
+Uses the require module system (not import like ES6)
+
+Very simple TODO list application (CRUD application)
+using NodeJS, the Express framework, Mocha (testing) and Mustache templates
+No real database!
+
+NOTE: If using this in project possible easier is to use the Sequelize ORM (i.e not TypeORM).
+
+
+Directory layout
+- models, the core OO model
+- public, for static pages
+- routes, mapping HTTP verns and URL to pages (also kind of control layer)
+- test, testng using mocha
+- views, the views using mustache templates for dynamic data in pages
+- app.js is the start of the application.
+
+Test:
+ - There are some mocha test, see test/...
+
+Install:
+- npm install -g nodemon (see https://www.npmjs.com/package/nodemon)
+- npm install
+
+Run:
+  Move to dir with app.js file
+
+  $ nodemon     (not app.js after)
+
+  Visit localhost:3000
+
+Debug:
+  There is : node-debug tool (not tested)
+
+NOTE:
+  Project generated using express-generator (if you would like to start from scratch)
+  See Express home page.

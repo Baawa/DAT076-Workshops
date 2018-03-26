@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+{{ >partials/head }}
+
+<body>
+	{{ >partials/header}}
+	<p> {{ text }}</p>
+	<form action="/todo/register" method="post">
+		<table>
+			<tr>
+				<td><input type="text" name="name" placeholder="name" /></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="email" placeholder="email" /></td>
+			</tr>
+			<tr>
+				<td><input type="text" name="password" placeholder="password" /></td>
+			</tr>
+			<tr>
+				<td><input type="submit" name="Submit" /></td>
+			</tr>
+		</table>
+	</form>
+	<a href="/todo"> Cancel </a>
+	<p>{{ >partials/footer }}</p>
+</body>
+
+</html>

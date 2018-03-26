@@ -1,0 +1,38 @@
+** Examples of HTTP-requests using curl ***
+
+// Most basic
+curl -v localhost:8080
+
+// Methods (must be uppercase)
+curl -v -X GET localhost:8080
+curl -v -X POST localhost:8080
+curl -v -X PUT localhost:8080
+curl -v -X DELETE localhost:8080
+curl -v -X OPTIONS localhost:8080
+
+// Request Headers
+curl -v -X GET -H "Accept-Language: en-US" localhost:8080
+curl -v -X GET -H "User-Agent: Mozilla/5.0" localhost:8080
+curl -v -X GET -H "Content-Type: application/json" localhost:8080
+
+// Send data query String
+curl -v -X GET localhost:8080?data=123
+
+// Send data in body (Content-Type application/x-www-form-urlencoded)
+curl -v -X POST http://localhost:8080 --data "data=123"
+
+// Send data %-encoding (encode space)
+curl -v -X GET localhost:8080?data%20value=123
+
+
+// Redirect
+curl -v localhost:8080 --location http://www.example.com/
+
+// Send a cookie
+$ curl --cookie "mycookie=test" localhost:8080
+
+// Receive a cookie and store in file headers_and_cookies
+curl -v --dump-header headers_and_cookies localhost:8080
+
+// Send previously received (and stored) cookie
+curl --cookie headers_and_cookies localhost:8080
